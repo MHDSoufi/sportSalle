@@ -14,3 +14,4 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', 'AdminController@user');
+Route::get('/admin/user/{id}', 'AdminController@showUser')->name('showUser');

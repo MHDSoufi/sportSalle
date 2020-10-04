@@ -21,9 +21,9 @@
                     @foreach($users as $user)
                     <tr>
                      <td>{{$user->nom}}</td>
-                     <td>{{App\Models\Forfait::find($user->forfait_id)->intitulet}}</td>
+                     <td>{{ $user->forfait->intitulet}}</td>
                      <td>
-                       <a href=""  class="btn btn-default">Voir <i class="fas fa-eye"></i></a>
+                       <a href=" {{ route('showUser' , $user->id) }}"  class="btn btn-default">Voir <i class="fas fa-eye"></i></a>
                        <a href="" class="btn btn-info">Modifier <i class="fas fa-edit"></i></a>
                       <button type="submit" class="btn btn-danger" style="         border-top-left-radius: 0;
                               border-bottom-left-radius: 0;"
